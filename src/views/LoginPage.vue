@@ -1,26 +1,22 @@
 <template>
   <section class="login-page">
-    <WaveComponent />
-    <div class="new-buttons top-right hidden lg:flex"></div>
-    <div class="new-buttons bottom-left hidden lg:flex"></div>
-    <div class="button-container flex flex-col space-y-8">
-      <button class="login-buttons w-full" @click="openLoginModal">
-        anmelden
-      </button>
-      <button class="login-buttons w-full" @click="openRegisterModal">
-        registrieren
-      </button>
-    </div>
+    <wave-component></wave-component>
+    <bubble-component></bubble-component>
+    <container-component></container-component>
   </section>
 </template>
 
 <script>
 import WaveComponent from '../components/Login/WaveComponent.vue'
+import BubbleComponent from '../components/Login/BubbleComponent.vue'
+import ContainerComponent from '../components/Login/ContainerComponent.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   components: {
     WaveComponent,
+    BubbleComponent,
+    ContainerComponent,
   },
 })
 </script>
@@ -36,89 +32,6 @@ export default defineComponent({
   );
   position: relative;
   overflow: hidden;
-}
-
-.wave-down svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.wave-up svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: scaleX(-1);
-  z-index: 10;
-}
-
-.new-buttons {
-  position: absolute;
-  background: linear-gradient(to right, #0072ca, #1192ff, #00c6ff);
-  border-radius: 50%;
-  padding: 3rem;
-  box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.3),
-    0 15px 30px rgba(0, 0, 0, 0.2);
-  width: auto;
-  max-width: 12rem;
-  z-index: 20;
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
-}
-
-.top-right {
-  top: 4rem;
-  right: 16rem;
-}
-
-.bottom-left {
-  bottom: 4rem;
-  left: 16rem;
-}
-
-.button-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  width: 18rem;
-  height: 18rem;
-  border-radius: 50%;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  min-width: 12rem;
-}
-
-.button {
-  background-color: #01a4ec;
-  color: #ffffff;
-  height: 2.5rem;
-  border-radius: 0.75rem;
-  width: 100%;
-}
-
-.login-buttons {
-  background: linear-gradient(to right, #0072ca, #1192ff, #0072ff, #00c6ff);
-  color: #ffffff;
-  height: 2.5rem;
-  border-radius: 0.75rem;
-  width: 100%;
-  max-width: 12rem;
-  letter-spacing: 0.1rem;
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
-}
-
-.login-buttons:hover {
-  background: linear-gradient(to right, #0072ff, #00c6ff, #0072ff);
-  transform: scale(1.05);
 }
 
 .modal-overlay {

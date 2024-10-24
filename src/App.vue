@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+// Komponenten
 import LoginPage from './views/LoginPage.vue'
 </script>
 
