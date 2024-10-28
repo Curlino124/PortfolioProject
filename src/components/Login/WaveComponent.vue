@@ -45,13 +45,13 @@ export default defineComponent({
   top: 0;
   right: 0;
   transform: scaleX(-1);
-  z-index: 10;
+  z-index: 5;
 }
 
 .wave-down svg {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 10;
+  z-index: 5;
 }
 </style>

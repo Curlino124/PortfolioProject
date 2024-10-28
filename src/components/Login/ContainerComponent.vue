@@ -23,7 +23,7 @@ export default defineComponent({
   width: 18rem;
   height: 18rem;
   border-radius: 50%;
-  z-index: 20;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;

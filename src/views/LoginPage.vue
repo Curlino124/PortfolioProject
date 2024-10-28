@@ -34,7 +34,7 @@ export default defineComponent({
   overflow: hidden;
 }
 
-.modal-overlay {
+/* .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -46,9 +46,9 @@ export default defineComponent({
   align-items: center;
   z-index: 1000;
   animation: fadeIn 0.3s ease-in-out;
-}
+} */
 
-.modal-header,
+/* .modal-header,
 .modal-footer {
   background-color: #f1f1f1;
   color: #2c2c2c;
@@ -61,7 +61,7 @@ export default defineComponent({
 
 .modal-footer {
   border-radius: 0 0 1rem 1rem;
-}
+} */
 
 .label-error-group {
   margin: 0 0 0.2rem 0.3rem;

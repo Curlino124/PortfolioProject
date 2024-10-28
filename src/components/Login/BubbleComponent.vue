@@ -1,17 +1,34 @@
 <template>
   <div>
-    <div class="bubbles top-right hidden lg:flex">
-      <font-awesome-icon :icon="['fas', 'question']" class="LoginPage-Icon" />
+    <div
+      class="bubbles top-right hidden lg:flex"
+      @mouseenter="showModal = true"
+      @mouseleave="showModal = false"
+    >
+      <font-awesome-icon
+        :icon="['fas', 'circle-info']"
+        class="login-infoIcon"
+      />
+      <info-modal
+        :modalVisible="showModal"
+        @close="showModal = false"
+      ></info-modal>
     </div>
     <div class="bubbles bottom-left hidden lg:flex"></div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import InfoModal from './InfoModal.vue'
 
 export default defineComponent({
   name: 'BubbleComponent',
+  components: { InfoModal },
+  setup() {
+    const showModal = ref(false)
+    return { showModal }
+  },
 })
 </script>
 
@@ -39,7 +56,7 @@ export default defineComponent({
   left: 16rem;
 }
 
-.LoginPage-Icon {
+.login-infoIcon {
   position: absolute;
   color: #ffffff;
   font-size: 3rem;

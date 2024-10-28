@@ -8,8 +8,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Import Fragezeichen
-import { faQuestion } from '@fortawesome/free-solid-svg-icons'
-library.add(faQuestion)
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
+library.add(faCircleInfo)
 
 const app = createApp(App)
 
